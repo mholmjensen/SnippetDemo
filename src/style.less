@@ -7,131 +7,81 @@
 .logo {
   max-width: 90%;
   margin: 20px;
-
-  .navbar-brand & {
-    display: inline;
-    margin: 2px;
-    width: 44px;
-  }
 }
 
 @fadeInSpeed: 500ms;
 @fadeOutSpeed: 300ms;
 
-.snippetEnabler {
-  margin-top:10px;
-
-  &.ng-enter {
-    animation: fadeInDown @fadeInSpeed;
-  }
-
-  &.ng-leave {
-    animation: fadeOutUp @fadeOutSpeed;
-  }
-}
-
-.snippetEdit {
-  margin-bottom: 15px;
-  border-bottom: 1px @gray-lighter solid;
-
-  &:last-child {
-    border: none;
-  }
-
-  &.ng-enter {
-    animation: fadeInRight @fadeInSpeed;
-  }
-
-  &.ng-leave {
-    animation: fadeOutRight @fadeOutSpeed;
-  }
-}
-
-.snippetContent {
-  &.ng-enter {
-    animation: fadeInRight @fadeInSpeed;
-  }
-
-  &.ng-leave {
-    animation: fadeOutRight @fadeOutSpeed;
-  }
-}
 
 .navbar {
   // Fallback for old browsers
-  background: #000;
-  background: rgba(0,0,0,0.8);
+  //background: #000;
+  //background: rgba(0,0,0,0.8);
   border: 0;
 }
 
-#auth-content {
-  padding: 20px 0;
-
-  .form-group {
-
-    .form-sub {
-      text-align: center;
-      margin-top: 10px;
-    }
-  }
-
-  #social-auth {
-    margin-top: 20px;
-
-    text-align: center;
-
-    ul {
-      margin: 10px 0 0 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: inline;
-        margin: 10px;
-      }
-    }
-  }
+mark {
+  padding: 0px;
+  background-color: rgba( 255, 165, 0, 1);
 }
 
-#welcome {
-  position: relative;
-
-  min-height: calc(~"100vh - 50px");
-  background-size: cover;
-
-  box-shadow: 0px 1px 250px 0px @gray inset;
-
-  .by-line {
-    position: absolute;
-    margin: 20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+#woo-content {
+  margin-top: 59px;
 }
 
-#site-content {
-  padding-top: 50px;
+/*  */
+.woo-toolbar {
 }
 
-#home-content {
-  padding: 20px 0;
+/* Custom Widgets Styling */
+.woo-line {
+  display: block;
 }
 
-.fa-inactive {
-  li.active & {
+.woo-line-empty {
+  display: block;
+  height: 18px;
+}
+
+
+.woo-btn-paper-mode {
+  position: absolute;
+  right: 30px;
+}
+
+.woo-paper-textarea {
+  padding: 10px 20px;
+  border-left: 5px solid #eee;
+  margin-bottom: 10px;
+}
+
+.woo-paper-blockquote {
+  background-color: rgba(235, 235, 235, 0.22);
+}
+
+
+/* Browser */
+.woo-browser-file-list {
+  list-style: none;
+}
+
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+ .woo-browser-file-list .dndDraggingSource {
     display: none;
-  }
 }
 
-.fa-active {
-  display: none;
-
-  li.active & {
-    display: inline-block;
-  }
-}
-
-.no-margin {
-  margin: 0;
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+ .woo-browser-file-list .dndPlaceholder {
+    display: block;
+    background-color: #eee;
+    min-height: 42px;
 }

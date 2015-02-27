@@ -1,13 +1,13 @@
 {
-  "name": "SnippetManager",
+  "name": "WooWidgets",
   "version": "0.1.0",
-  "description": "A tool that generates content from snippets",
+  "description": "Woo",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/rasmuslp/SnippetManager.git"
+    "url": "https://github.com/mholmjensen/WooWidgets.git"
   },
-  "contributers": [
+  "contributors": [
     {
       "name": "Rasmus Ljungmann Pedersen",
       "email": "rasmuslp@gmail.com",
@@ -17,10 +17,13 @@
       "name": "Morten Ydefeldt",
       "email": "moryde@gmail.com",
       "url" : "http://ydefeldt.com/"
+    },
+    {
+      "name": "Martin Holm Jensen"
     }
   ],
   "bugs": {
-    "url": "https://github.com/rasmuslp/SnippetManager/issues"
+    "url": "https://github.com/mholmjensen/WooWidgets/issues"
   },
   "homepage": "https://snippetmanager.firebaseapp.com",
   "devDependencies": {

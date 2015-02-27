@@ -2,58 +2,10 @@
 	'use strict';
 
 	angular.module('auth', ['ngMessages', 'auth.service', 'auth.controller', 'auth.directives'])
+/*
 
-	.constant('welcomeNoAuthState', 'welcome')
-	.constant('welcomeAuthState', 'home.home')
+	.run(function($rootScope, $state, AuthService) {
 
-	.config(function($urlRouterProvider, $stateProvider, welcomeNoAuthState, welcomeAuthState) {
-		$urlRouterProvider.otherwise('/redirect');
-
-		$stateProvider
-		.state('auth', {
-			abstract: true,
-			template: '<div ui-view></div>',
-			resolve: {
-				'auth': function(AuthService) {
-					return AuthService.getAuth();
-				}
-			}
-		})
-		.state('auth.login', {
-			url: '/login',
-			templateUrl: 'app/auth/auth.tpl.html',
-			controller: 'AuthController',
-			controllerAs: 'authCtrl'
-		})
-		.state('auth.logout', {
-			onEnter: function(AuthService) {
-				AuthService.logout();
-			},
-			controller: function($state) {
-				$state.go(welcomeNoAuthState, {reload: true});
-			}
-		})
-		.state('auth.redirect', {
-			url: '/redirect',
-			templateUrl: 'app/auth/auth-pre.tpl.html',
-			controller: function($state) {
-				$state.go('auth.authenticating');
-			}
-		})
-		.state('auth.authenticating', {
-			controller: function(auth, $state) {
-				if (auth === null) {
-					console.log('Not authed, redirecting to front page');
-					$state.go(welcomeNoAuthState);
-				} else {
-					console.log('Authed, redirecting');
-					$state.go(welcomeAuthState);
-				}
-			}
-		});
-	})
-
-	.run(function($rootScope, $state, welcomeAuthState, AuthService) {
 		AuthService.watch(function(newAuth, oldAuth) {
 			// Just logged in
 			if (newAuth && (angular.isUndefined(oldAuth) || oldAuth === null)) {
@@ -98,6 +50,8 @@
 				$state.go('auth.login');
 			}
 		});
-	});
+	})
+	*/
+	;
 
 }());

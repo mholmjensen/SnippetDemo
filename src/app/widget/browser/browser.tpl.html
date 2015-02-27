@@ -1,0 +1,17 @@
+<ul class="list-group woo-browser-file-list"
+    dnd-list="widgetBrowserCtrl.files">
+    <!-- The dnd-draggable directive makes an element draggable and will
+         transfer the object that was assigned to it. If an element was
+         dragged away, you have to remove it from the original list
+         yourself using the dnd-moved attribute -->
+    <li ng-repeat="file in widgetBrowserCtrl.files"
+        dnd-draggable="file"
+        dnd-moved="widgetBrowserCtrl.list.moved(event, $index, file)"
+        dnd-effect-allowed="move"
+        dnd-selected="widgetBrowserCtrl.list.selected(event, $index, file)"
+        class="list-group-item"
+        ng-class="{'active': widgetBrowserCtrl.status.selected === file}"
+        >
+        <span woo-browser-file></span>
+    </li>
+</ul>

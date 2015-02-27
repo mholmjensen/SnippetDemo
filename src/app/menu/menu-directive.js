@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('menu.directive', ['menu.controller'])
-  .directive('siteMenu', function() {
+  .directive('wooMenu', function() {
     return {
       restrict: 'E',
       scope: true,

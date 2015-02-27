@@ -1,6 +1,6 @@
 (function() {
 	'use strict';
-
+/*
 	angular.module('auth.service', ['common.config', 'firebase'])
 	.factory('AuthService', function(FB, $firebase, $firebaseAuth) {
 		var fbAuth = $firebaseAuth(new Firebase(FB));
@@ -8,7 +8,6 @@
 		var listeners = [];
 
 		function statusChange(authData) {
-			console.log('Auth status and data: %o', authData);
 			var oldAuth = ret.auth;
 			ret.auth = fbAuth.$getAuth();
 			angular.forEach(listeners, function(fn) {
@@ -117,5 +116,5 @@
 			});
 		};
 	});
-
+*/
 }());

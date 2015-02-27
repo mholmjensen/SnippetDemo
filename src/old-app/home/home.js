@@ -9,8 +9,8 @@
       abstract: true,
       url: '/home',
       template: '<div id="home-content" ui-view></div>',
-      contoller: function($state) {
-        $state.go('home.home');
+      controller: function($state) {
+        $state.go('welcome');
       },
       resolve: {
         requireAuth: function(requireAuth) {

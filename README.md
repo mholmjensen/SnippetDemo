@@ -1,2 +1,2 @@
-# SnippetManager
-A snippet manager for generating texts
+# WooWidgets
+Created from https://github.com/rasmuslp/SnippetManager.

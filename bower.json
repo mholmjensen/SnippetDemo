@@ -1,12 +1,11 @@
 {
-  "name": "SnippetManager",
+  "name": "WooWidgets",
   "version": "0.1.0",
-  "homepage": "https://github.com/rasmuslp/SnippetManager",
+  "homepage": "https://github.com/mholmjensen/WooWidgets",
   "authors": [
-    "Rasmus Ljungmann Pedersen <rasmuslp@gmail.com> (http://ljungmann.net)",
-    "Morten Ydefeldt <moryde@gmail.com> (http://ydefeldt.com)"
+    "Martin Holm Jensen"
   ],
-  "description": "A tool that generates content from snippets",
+  "description": "Woo",
   "private": true,
   "ignore": [
     "**/.*",
@@ -29,7 +28,8 @@
     "angular-animate": "~1.3.13",
     "animate.css": "~3.2.0",
     "ng-tags-input": "~2.1.1",
-    "angulartics": "~0.17.2"
+    "angulartics": "~0.17.2",
+    "angular-drag-and-drop-lists": "~1.2.0"
   },
   "resolutions": {
     "angular": "~1.3.13",

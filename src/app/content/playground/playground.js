@@ -9,7 +9,7 @@
 	.directive('wooPlayground', function() {
 		return {
 			restrict: 'EA',
-			scope: {},
+			scope: true,
 			templateUrl: 'app/content/playground/playground.tpl.html',
       controller: 'PlaygroundController',
       controllerAs: 'playgroundCtrl'

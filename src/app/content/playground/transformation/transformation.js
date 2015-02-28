@@ -8,8 +8,8 @@
     return {
       restrict: 'EA',
       scope: {
-				transformation: '=transformation',
-				candidate: '=candidate'
+				transformation: '=',
+				candidate: '='
 			},
       templateUrl: 'app/content/playground/transformation/transformation.tpl.html',
       controller: 'PlaygroundTransformationController',
@@ -21,7 +21,7 @@
     return {
       restrict: 'EA',
       scope: {
-				candidate: '=candidate'
+				candidate: '='
 			},
       templateUrl: 'app/content/playground/transformation/candidate.tpl.html'
     };

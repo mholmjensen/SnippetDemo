@@ -6,7 +6,9 @@
   .controller('PlaygroundController', function( $scope ) {
     var self = this;
 
-    /* Defaults for initialisation as this is currently root widget*/
+    /* Defaults for initialisation as this is currently root widget
+       This will either come from data storage or from default settings (as now)
+    */
     /*jshint multistr: true */
     this.longRawText = 'Recipient\'s name\n\
     Recipient\'s title\n\
@@ -158,9 +160,6 @@
         }
       ]
     };
-
-
-
 
     // scope owner, meaning it is root and owns all data
     // all data shared with children is done via an isolated scope for a directive

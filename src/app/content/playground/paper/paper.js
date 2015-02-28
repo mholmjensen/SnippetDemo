@@ -1,12 +1,18 @@
 (function () {
 	'use strict';
 
-	angular.module('playground.paper', ['playground', 'playground.config', 'playground.paper.controller', 'monospaced.elastic'])
+	angular.module('playground.paper', ['playground', 'playground.config',
+																			'playground.paper.controller',
+																			'monospaced.elastic'])
 
 	.directive('wooPaper', function() {
     return {
       restrict: 'EA',
-      scope: true,
+      scope: {
+				paper: '=',
+				transformation: '=',
+				candidate: '='
+			},
       templateUrl: 'app/content/playground/paper/paper.tpl.html',
       controller: 'PlaygroundPaperController',
       controllerAs: 'playgroundPaperCtrl'
@@ -18,11 +24,11 @@
       restrict: 'EA',
 			scope: {
         letters: '@letters',
-        number: '@number'
+        number: '@number',
+				transformation: '=',
+				candidate: '='
       },
-      templateUrl: 'app/content/playground/paper/line.tpl.html',
-      controller: 'WidgetPaperController',
-      controllerAs: 'widgetPaperCtrl'
+      templateUrl: 'app/content/playground/paper/line.tpl.html'
     };
   })
 
@@ -31,11 +37,11 @@
     return {
       restrict: 'EA',
 			scope: {
-        word: '@word'
+				word: '@',
+				transformation: '=',
+				candidate: '='
       },
-      templateUrl: 'app/content/playground/paper/word.tpl.html',
-      controller: 'WidgetPaperController',
-      controllerAs: 'widgetPaperCtrl'
+      templateUrl: 'app/content/playground/paper/word.tpl.html'
     };
   })
 

@@ -1,5 +1,5 @@
-<span ng-click="widgetPaperCtrl.wordClicked( number )"
-      ng-bind-html="word | highlight: widgetPaperCtrl.transformation.active | html ">
+<span ng-click="candidate.current = word"
+      ng-bind-html="word | highlight: transformation.currentTransformation.active | html ">
 </span>
 <!--      ng-click="widgetPaperCtrl.lineClicked( number )"
       ng-bind-html="letters |

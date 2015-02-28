@@ -25,9 +25,42 @@ mark {
   background-color: rgba( 255, 165, 0, 1);
 }
 
+// Default scope class
+.ng-scope  {
+  border: 1px solid rgba(10, 10, 10, 1);
+}
+
+
+/* woo classes */
 .woo-content {
   margin-top: 59px;
 }
+
+.woo-playground {
+
+}
+
+
+.woo-content .ng-scope  {
+  border: 1px solid rgba(10, 200, 200, 1);
+}
+
+.woo-playground .ng-scope  {
+  border: 1px solid rgba(200, 10, 10, 1);
+}
+
+.woo-browser, .woo-toolbar, .woo-paper, .woo-transformation .ng-scope  {
+  border: 1px solid rgba(10, 10, 200, 1);
+}
+
+.woo-line, .woo-candidate .ng-scope, .ng-isolate-scope  {
+  border: 1px solid rgba(200, 10, 200, 1);
+}
+
+.woo-word .ng-scope  {
+  border: 1px solid rgba(10, 200, 10, 1);
+}
+
 
 /*  */
 .woo-toolbar {
@@ -84,18 +117,4 @@ mark {
     display: block;
     background-color: #eee;
     min-height: 42px;
-}
-
-
-.ng-scope  {
-  border: 1px solid rgba(200, 10, 10, 1) !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
-}
-
-
-.woo-playground .ng-scope  {
-  border: 1px solid rgba(10, 10, 200, 1) !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
 }

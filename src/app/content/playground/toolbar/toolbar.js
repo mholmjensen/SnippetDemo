@@ -1,13 +1,13 @@
 (function () {
 	'use strict';
 
-	angular.module('widget.toolbar', ['widget', 'widget.config', 'widget.toolbar.controller'])
+	angular.module('playground.toolbar', ['playground', 'playground.config', 'playground.toolbar.controller'])
 
 	.directive('wooToolbar', function() {
     return {
       restrict: 'E',
       scope: true,
-      templateUrl: 'app/widget/toolbar/toolbar.tpl.html',
+      templateUrl: 'app/content/playground/toolbar/toolbar.tpl.html',
       controller: 'WidgetToolbarController',
       controllerAs: 'widgetToolbarCtrl'
     };

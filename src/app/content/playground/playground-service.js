@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('widget.service', [])
+	angular.module('playground.service', [])
 	/*
 		Structure like a tree, with (currently) WidgetBrowserService being the root.
 		This means all information flows from the root towards a leaf, and so the root has ownership of all data in Widget*Service

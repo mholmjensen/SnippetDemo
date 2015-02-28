@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('widget.paper.controller', ['widget.service'])
+  angular.module('playground.paper.controller', ['playground.service'])
 
   .controller('WidgetPaperController', function( WidgetPaperService, WidgetCandidateService, WidgetTransformationService ) {
     this.paper = WidgetPaperService.paper;

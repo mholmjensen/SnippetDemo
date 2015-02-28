@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	angular.module('widget.config', [])
+	angular.module('playground.config', [])
 
 	.filter('substitute', function () {
 		return function(line, subs) {

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('widget.browser.controller', ['widget.service'])
+  angular.module('playground.browser.controller', ['playground.service'])
 
   .controller('WidgetBrowserController', function( $scope, WidgetPaperService, WidgetTransformationService, WidgetCandidateService ) {
     var self = this;

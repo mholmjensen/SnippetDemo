@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('menu.controller', ['common'])
+  angular.module('woo.menu.controller', [])
   .controller('MenuController', function () {
     this.name = '';
   });

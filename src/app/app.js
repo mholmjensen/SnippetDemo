@@ -2,7 +2,8 @@
 
 (function () {
 
-	angular.module('woo', ['templates', 'ui.router', 'analytics', 'ngClipboard', 'dndLists', 'common'])
+	angular.module('woo', ['templates', 'ui.router', 'ngClipboard', 'dndLists',
+												 'woo.config' ])
 
 	.config(function(ngClipProvider) {
 		ngClipProvider.setPath('assets/ZeroClipboard.swf');

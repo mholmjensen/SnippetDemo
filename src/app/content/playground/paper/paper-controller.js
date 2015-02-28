@@ -1,12 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('playground.paper.controller', ['playground.service'])
+  angular.module('playground.paper.controller', [])
 
-  .controller('WidgetPaperController', function( WidgetPaperService, WidgetCandidateService, WidgetTransformationService ) {
-    this.paper = WidgetPaperService.paper;
-    this.candidate = WidgetCandidateService.candidate;
-    this.transformation = WidgetTransformationService.transformation;
+  .controller('PlaygroundPaperController', function() {
     this.lineClicked = function( number ) {
       console.log('lc: ' + number );
     };

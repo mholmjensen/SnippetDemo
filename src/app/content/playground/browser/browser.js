@@ -2,25 +2,33 @@
 	'use strict';
 
 	angular.module('playground.browser', ['playground', 'playground.config',
-																				'playground.browser.controller', 'playground.browser.controller',
-																				, 'playground.browser-file.controller'])
+																				'playground.browser.controller',
+																				'playground.browser-file.controller'])
 
 	.directive('wooBrowser', function() {
     return {
       restrict: 'EA',
-      scope: true,
+      scope: {
+				files: '=files',
+				transformation: '=transformation',
+				candidate: '=candidate',
+				paper: '=paper'
+			},
       templateUrl: 'app/content/playground/browser/browser.tpl.html',
-      controller: 'WidgetBrowserController',
-      controllerAs: 'widgetBrowserCtrl'
+      controller: 'PlaygroundBrowserController',
+      controllerAs: 'playgroundBrowserCtrl'
     };
   })
 
 	.directive('wooBrowserFile', function() {
     return {
       restrict: 'EA',
+      scope: {
+				file: '=file'
+			},
       templateUrl: 'app/content/playground/browser/browser-file.tpl.html',
-      controller: 'WidgetBrowserFileController',
-      controllerAs: 'widgetBrowserFileCtrl'
+      controller: 'PlaygroundBrowserFileController',
+      controllerAs: 'playgroundBrowserFileCtrl'
     };
   })
 	;

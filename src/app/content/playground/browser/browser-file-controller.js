@@ -1,13 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('playground.browser-file.controller', ['playground.service', 'playground.browser'])
+  angular.module('playground.browser-file.controller', ['playground.browser'])
 
-  .controller('WidgetBrowserFileController', function( WidgetPaperService, WidgetCandidateService, WidgetTransformationService ) {
-    this.paper  = WidgetPaperService;
-    this.candidate  = WidgetCandidateService;
-    this.transformation  = WidgetTransformationService;
-
+  .controller('PlaygroundBrowserFileController', function() {
   });
 
 }());

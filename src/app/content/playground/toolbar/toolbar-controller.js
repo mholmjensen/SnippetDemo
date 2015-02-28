@@ -1,12 +1,10 @@
 (function () {
   'use strict';
 
-  angular.module('playground.toolbar.controller', ['playground.service'])
+  angular.module('playground.toolbar.controller', [])
 
-  .controller('WidgetToolbarController', function( WidgetPaperService, WidgetCandidateService, WidgetTransformationService ) {
-    this.paper = WidgetPaperService.paper;
-    this.candidate = WidgetCandidateService.candidate;
-    this.transformation = WidgetTransformationService.transformation;
+  .controller('PlaygroundToolbarController', function( ) {
+
   });
 
 }());

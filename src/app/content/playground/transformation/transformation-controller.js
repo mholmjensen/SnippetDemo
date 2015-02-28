@@ -1,12 +1,11 @@
 (function () {
   'use strict';
 
-  angular.module('playground.transformation.controller', ['playground.service'])
+  angular.module('playground.transformation.controller', [])
 
-  .controller('WidgetTransformationController', function( WidgetPaperService, WidgetCandidateService, WidgetTransformationService ) {
-    this.paper = WidgetPaperService.paper;
-    this.candidate = WidgetCandidateService.candidate;
-    this.transformation = WidgetTransformationService.transformation;
+  .controller('PlaygroundTransformationController', function( $scope ) {
+    console.log($scope);
+    console.log('ptc');
   });
 
 }());

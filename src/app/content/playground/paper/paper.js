@@ -8,8 +8,8 @@
       restrict: 'EA',
       scope: true,
       templateUrl: 'app/content/playground/paper/paper.tpl.html',
-      controller: 'WidgetPaperController',
-      controllerAs: 'widgetPaperCtrl'
+      controller: 'PlaygroundPaperController',
+      controllerAs: 'playgroundPaperCtrl'
     };
   })
 

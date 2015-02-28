@@ -1,7 +1,8 @@
 (function () {
 	'use strict';
 
-	angular.module('common.config', ['content', 'menu'])
+	angular.module('woo.config', ['woo.content', 'woo.menu'])
+
 	.constant('FB', 'https://snippetmanager.firebaseio.com/')
 
 	.config(function( $urlRouterProvider, $stateProvider ) {

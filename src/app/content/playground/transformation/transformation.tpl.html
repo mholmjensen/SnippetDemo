@@ -1,4 +1,5 @@
-<div class="input-group input-group-sm" ng-repeat="replacement in widgetTransformationCtrl.transformation.replacements">
+T1
+<div class="input-group input-group-sm" ng-repeat="replacement in transformation.currentTransformation.replacements">
   <div class="input-group-btn">
     <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
@@ -9,10 +10,10 @@
       <li><a href="#">Markdown</a></li>
     </ul>
   </div>
-  <span class="input-group-addon text-left" style="width: 120px; text-align: left;" ng-click="widgetTransformationCtrl.transformation.active = replacement">{{replacement.from}}</span>
+  <span class="input-group-addon text-left" style="width: 120px; text-align: left;" ng-click="transformation.active = replacement">{{replacement.from}}</span>
   <input type="text" class="form-control" aria-label="..."
           ng-model="replacement.to"
-          ng-click="widgetTransformationCtrl.transformation.active = replacement"
+          ng-click="transformation.active = replacement"
           >
   <div class="input-group-btn">
     <button type="button" class="btn btn-default btn-sm" aria-label="Left Align" ng-model="replacement.enabled" ng-click="replacement.enabled = !replacement.enabled">
@@ -21,3 +22,7 @@
     </button>
   </div>
 </div>
+T2
+
+<div woo-candidate
+     candidate="candidate">

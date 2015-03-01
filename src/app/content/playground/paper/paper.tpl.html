@@ -8,7 +8,7 @@
   <blockquote class="small woo-paper-blockquote" ng-show="!isViewing">
 
     <div  class="woo-line" woo-line
-          ng-repeat="line in paper.currentPaper.rawText | rawToLines track by $index"
+          ng-repeat="line in paper.rawText | rawToLines track by $index"
           number="{{$index}}"
           letters="{{line}}"
           candidate="candidate"
@@ -18,8 +18,8 @@
     </div>
   </blockquote>
   <textarea class="form-control input-sm small woo-paper-textarea msd-elastic"
-            rows="{{ ( paper.currentPaper.rawText | rawToLines ).length }}"
+            rows="{{ ( paper.rawText | rawToLines ).length }}"
             ng-show="isViewing"
-            ng-model="paper.currentPaper.rawText">
+            ng-model="paper.rawText">
   </textarea>
 </div>

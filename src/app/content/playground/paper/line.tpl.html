@@ -1,8 +1,8 @@
 
 <span class="woo-word" woo-word
-      ng-repeat="word in letters | substitute: transformation.currentTransformation.replacements | lettersToWords track by $index"
+      ng-repeat="word in letters | substitute: transformation.replacements | lettersToWords track by $index"
       word="{{word}}"
-      transformation="transformation.currentTransformation"
-      candidate="candidate.currentCandidate"
+      transformation="transformation"
+      candidate="candidate"
       >
 </span>

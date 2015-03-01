@@ -20,16 +20,11 @@
 	.filter('highlight', function () {
 		return function( line, sub ) {
 			if( sub === undefined || sub.to === undefined ) {
+				console.log( 'sub is not well-defined' );
 				return line;
 			}
 
 			return line.replace(new RegExp(sub.to, 'g'), '<mark>' + sub.to + '</mark>');
-		};
-	})
-
-	.filter('replaceEmptyWord', function () {
-		return function( word ) {
-			return ( word.length === 0 ? '-' : word );
 		};
 	})
 

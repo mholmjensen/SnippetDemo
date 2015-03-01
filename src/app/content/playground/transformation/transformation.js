@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('playground.transformation', ['playground', 'playground.config',
-																							 'playground.transformation.controller'])
+																							 'playground.transformation.controller', 'playground.candidate.controller'])
 
 	.directive('wooTransformation', function() {
     return {
@@ -21,9 +21,12 @@
     return {
       restrict: 'EA',
       scope: {
+				transformation: '=',
 				candidate: '='
 			},
-      templateUrl: 'app/content/playground/transformation/candidate.tpl.html'
+      templateUrl: 'app/content/playground/transformation/candidate.tpl.html',
+      controller: 'PlaygroundCandidateController',
+      controllerAs: 'playgroundCandidateCtrl'
     };
   })
 	;

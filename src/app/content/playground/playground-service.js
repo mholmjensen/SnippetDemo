@@ -9,67 +9,63 @@
 		*/
 		/*jshint multistr: true */
 		this.longRawText = 'Recipient\'s name\n\
-		Recipient\'s title\n\
-		Recipient\'s company\n\
-		Recipient\'s company address\n\
-		\n\
-		Recipient\'s Name:\n\
-		\n\
-		People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
-		\n\
-		Single space your letters and use a serif typeface. Skip a line between paragraphs. Because people read business letters quickly, use shorter sentences and paragraphs than you would in a longer document. Sentences should average fewer than twenty words, and paragraphs should average fewer than seven lines.\n\
-		\n\
-		Space your letter on the page so that it does not crowd the top. However, if possible, keep your letter to one page. Second pages often are not read. Send copies to anyone whose name you mention in the letter or who would be directly affected by the letter.\n\
-		\n\
-		Final paragraphs should tell readers what you want them to do or what you will do for them.\n\
-		\n\
-		Sincerely,\n\
-		Signature\n\
-		Name\n\
-		\n\
-		Enclosure\n\
-		\n\
-		cc: Name to receive copy';
+Recipient\'s title\n\
+Recipient\'s company\n\
+Recipient\'s company address\n\
+\n\
+Recipient\'s Name:\n\
+\n\
+People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
+\n\
+Single space your letters and use a serif typeface. Skip a line between paragraphs. Because people read business letters quickly, use shorter sentences and paragraphs than you would in a longer document. Sentences should average fewer than twenty words, and paragraphs should average fewer than seven lines.\n\
+\n\
+Space your letter on the page so that it does not crowd the top. However, if possible, keep your letter to one page. Second pages often are not read. Send copies to anyone whose name you mention in the letter or who would be directly affected by the letter.\n\
+\n\
+Final paragraphs should tell readers what you want them to do or what you will do for them.\n\
+\n\
+Sincerely,\n\
+Signature\n\
+Name\n\
+\n\
+Enclosure\n\
+\n\
+cc: Name to receive copy';
 
 		this.mediumRawText = 'Recipient\'s name\n\
-		Recipient\'s title\n\
-		Recipient\'s company\n\
-		Recipient\'s company address\n\
-		\n\
-		Recipient\'s Name:\n\
-		\n\
-		People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
-		\n\
-		Single space your letters and use a serif typeface. Skip a line between paragraphs. Because people read business letters quickly, use shorter sentences and paragraphs than you would in a longer document. Sentences should average fewer than twenty words, and paragraphs should average fewer than seven lines.\n\
-		\n\
-		Sincerely,\n\
-		Signature\n\
-		Name\n\
-		\n\
-		Enclosure\n\
-		\n\
-		cc: Name to receive copy';
+Recipient\'s title\n\
+Recipient\'s company\n\
+Recipient\'s company address\n\
+\n\
+Recipient\'s Name:\n\
+\n\
+People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
+\n\
+Single space your letters and use a serif typeface. Skip a line between paragraphs. Because people read business letters quickly, use shorter sentences and paragraphs than you would in a longer document. Sentences should average fewer than twenty words, and paragraphs should average fewer than seven lines.\n\
+\n\
+Sincerely,\n\
+Signature\n\
+Name\n\
+\n\
+Enclosure\n\
+\n\
+cc: Name to receive copy';
 
 		this.shortRawText = 'Recipient\'s name\n\
-		Recipient\'s title\n\
-		Recipient\'s company\n\
-		Recipient\'s company address\n\
-		\n\
-		Recipient\'s Name:\n\
-		\n\
-		People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
-		\n\
-		Sincerely,\n\
-		Signature\n\
-		Name\n\
-		\n\
-		Enclosure\n\
-		\n\
-		cc: Name to receive copy';
-
-		this.longCurrent = 'This is my candidate';
-		this.mediumCurrent = 'Candidate';
-		this.shortCurrent = 'Can';
+Recipient\'s title\n\
+Recipient\'s company\n\
+Recipient\'s company address\n\
+\n\
+Recipient\'s Name:\n\
+\n\
+People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.\n\
+\n\
+Sincerely,\n\
+Signature\n\
+Name\n\
+\n\
+Enclosure\n\
+\n\
+cc: Name to receive copy';
 
 		this.longReplacements = [
 			{
@@ -119,10 +115,14 @@
 							rawText: this.longRawText
 						},
 						transformation: {
-							replacements: this.mediumReplacements
+							replacements: this.mediumReplacements,
+							highlight: ''
 						},
 						candidate: {
-							current: this.shortCurrent
+							current: {
+								from: '',
+								to: ''
+							}
 						}
 					}
 				},
@@ -134,10 +134,14 @@
 							rawText: this.shortRawText
 						},
 						transformation: {
-							replacements: this.longReplacements
+							replacements: this.longReplacements,
+							highlight: ''
 						},
 						candidate: {
-							current: this.mediumCurrent
+							current: {
+								from: '',
+								to: ''
+							}
 						}
 					}
 				},
@@ -149,10 +153,14 @@
 							rawText: this.mediumRawText
 						},
 						transformation: {
-							replacements: this.shortReplacements
+							replacements: this.shortReplacements,
+							highlight: ''
 						},
 						candidate: {
-							current: this.longCurrent
+							current: {
+								from: '',
+								to: ''
+							}
 						}
 					}
 				}

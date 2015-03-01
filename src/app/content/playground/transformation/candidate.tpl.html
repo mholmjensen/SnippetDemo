@@ -5,12 +5,13 @@
       <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
     </button>
   </div>
-  <span class="input-group-addon text-left" style="width: 120px; text-align: left;">?</span>
-  <input type="text" class="form-control" aria-label="..."
-          ng-model="candidate.current"
+  <span class="input-group-addon text-left" style="width: 120px; text-align: left;">{{candidate.current.from}}</span>
+  <input type="text" class="form-control" aria-label="..." placeholder="Click paper"
+          ng-model="candidate.current.to"
           >
   <div class="input-group-btn">
-    <button type="button" class="btn btn-suggested btn-sm" aria-label="Left Align" ng-model="replacement.enabled" ng-click="replacement.enabled = !replacement.enabled">
+    <button type="button" class="btn btn-suggested btn-sm" aria-label=""
+            ng-click="addCandidate( candidate.current.from, candidate.current.to )">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
   </div>

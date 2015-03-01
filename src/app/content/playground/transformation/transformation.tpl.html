@@ -10,23 +10,29 @@
     </ul>
   </div>
   <span class="input-group-addon text-left" style="width: 120px; text-align: left;"
-        ng-click="transformation.active = replacement">
+        ng-click="transformation.highlight = replacement">
         {{replacement.from}}
   </span>
   <input type="text" class="form-control" aria-label="..."
           ng-model="replacement.to"
-          ng-click="transformation.active = replacement"
+          ng-click="transformation.highlight = replacement"
           >
   <div class="input-group-btn">
-    <button type="button" class="btn btn-default btn-sm" aria-label="Left Align" ng-model="replacement.enabled" ng-click="replacement.enabled = !replacement.enabled">
-      <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="replacement.enabled"></span>
-      <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-show="!replacement.enabled"></span>
+    <button type="button" class="btn btn-default btn-sm" aria-label="Left Align"
+            ng-model="replacement.enabled"
+            ng-click="replacement.enabled = !replacement.enabled">
+      <span class="glyphicon glyphicon-ok" aria-hidden="true"
+            ng-show="replacement.enabled"></span>
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"
+            ng-show="!replacement.enabled"></span>
     </button>
   </div>
+
 </div>
 <div style="height: 10px">
 </div>
 <div class="woo-candidate"
      woo-candidate
-     candidate="candidate">
+     candidate="candidate"
+     transformation="transformation">
 </div>

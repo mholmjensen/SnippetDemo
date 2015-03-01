@@ -4,7 +4,6 @@
   angular.module('playground.controller', [ 'playground.service'] )
 
   .controller('PlaygroundController', function( $scope, PlaygroundService ) {
-    console.log( PlaygroundService );
     // scope owner, meaning it is root and owns all data
     // all data shared with children is done via an isolated scope for a directive
     $scope.browser = {};

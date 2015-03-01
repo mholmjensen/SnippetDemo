@@ -12,7 +12,7 @@
 
     this.list = {
       moved: function(event, index, file) {
-        self.files.splice(index, 1);
+        $scope.files.splice(index, 1);
       },
       selected: function(file) {
         self.status.selected = file;

@@ -38,6 +38,7 @@
 		});
 	}])
 
+
 	.run(['$rootScope', function($rootScope) {
 		$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
 			console.log(fromState.name + ' -> ' + toState.name);
@@ -325,81 +326,6 @@ cc: Name to receive copy';
 (function () {
   'use strict';
 
-  angular.module('playground.browser.controller', [])
-
-  .controller('PlaygroundBrowserController', ['$scope', function( $scope ) {
-    var self = this;
-
-    this.status = {
-      selected: $scope.files[0]
-    };
-
-    this.list = {
-      moved: function(event, index, file) {
-        $scope.files.splice(index, 1);
-      },
-      selected: function(file) {
-        self.status.selected = file;
-        $scope.transformation = file.content.transformation;
-        $scope.candidate = file.content.candidate;
-        $scope.paper = file.content.paper;
-      }
-    };
-
-  }]);
-
-}());
-
-(function () {
-  'use strict';
-
-  angular.module('playground.browser-file.controller', ['playground.browser'])
-
-  .controller('PlaygroundBrowserFileController', function() {
-  });
-
-}());
-
-(function () {
-	'use strict';
-
-	angular.module('playground.browser', ['playground', 'playground.config',
-																				'playground.browser.controller',
-																				'playground.browser-file.controller'])
-
-	.directive('wooBrowser', function() {
-    return {
-      restrict: 'EA',
-      scope: {
-				files: '=files',
-				transformation: '=transformation',
-				candidate: '=candidate',
-				paper: '=paper'
-			},
-      templateUrl: 'app/content/playground/browser/browser.tpl.html',
-      controller: 'PlaygroundBrowserController',
-      controllerAs: 'playgroundBrowserCtrl'
-    };
-  })
-
-	.directive('wooBrowserFile', function() {
-    return {
-      restrict: 'EA',
-      scope: {
-				file: '=file'
-			},
-      templateUrl: 'app/content/playground/browser/browser-file.tpl.html',
-      controller: 'PlaygroundBrowserFileController',
-      controllerAs: 'playgroundBrowserFileCtrl'
-    };
-  })
-	;
-
-}());
-
-(function () {
-  'use strict';
-
   angular.module('playground.paper.controller', [])
 
   .controller('PlaygroundPaperController', function() {
@@ -519,6 +445,81 @@ cc: Name to receive copy';
 	  }])
 
 
+	;
+
+}());
+
+(function () {
+  'use strict';
+
+  angular.module('playground.browser.controller', [])
+
+  .controller('PlaygroundBrowserController', ['$scope', function( $scope ) {
+    var self = this;
+
+    this.status = {
+      selected: $scope.files[0]
+    };
+
+    this.list = {
+      moved: function(event, index, file) {
+        $scope.files.splice(index, 1);
+      },
+      selected: function(file) {
+        self.status.selected = file;
+        $scope.transformation = file.content.transformation;
+        $scope.candidate = file.content.candidate;
+        $scope.paper = file.content.paper;
+      }
+    };
+
+  }]);
+
+}());
+
+(function () {
+  'use strict';
+
+  angular.module('playground.browser-file.controller', ['playground.browser'])
+
+  .controller('PlaygroundBrowserFileController', function() {
+  });
+
+}());
+
+(function () {
+	'use strict';
+
+	angular.module('playground.browser', ['playground', 'playground.config',
+																				'playground.browser.controller',
+																				'playground.browser-file.controller'])
+
+	.directive('wooBrowser', function() {
+    return {
+      restrict: 'EA',
+      scope: {
+				files: '=files',
+				transformation: '=transformation',
+				candidate: '=candidate',
+				paper: '=paper'
+			},
+      templateUrl: 'app/content/playground/browser/browser.tpl.html',
+      controller: 'PlaygroundBrowserController',
+      controllerAs: 'playgroundBrowserCtrl'
+    };
+  })
+
+	.directive('wooBrowserFile', function() {
+    return {
+      restrict: 'EA',
+      scope: {
+				file: '=file'
+			},
+      templateUrl: 'app/content/playground/browser/browser-file.tpl.html',
+      controller: 'PlaygroundBrowserFileController',
+      controllerAs: 'playgroundBrowserFileCtrl'
+    };
+  })
 	;
 
 }());

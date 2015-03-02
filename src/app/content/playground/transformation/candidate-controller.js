@@ -15,7 +15,7 @@
         {
           from: from,
           to: to
-        }  
+        }
       );
 
       $scope.reset();
@@ -24,7 +24,7 @@
     $scope.reset = function() {
       $scope.candidate.current.from = '';
       $scope.candidate.current.to = '';
-    }
+    };
   });
 
 }());
